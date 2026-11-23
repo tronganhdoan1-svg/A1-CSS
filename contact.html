@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMM News Network - Contact Us</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Open Graph (Facebook, Discord, LinkedIn, most others) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="IMM News Network">
+    <meta property="og:title" content="IMM News Network">
+    <meta property="og:description" content="News on the interactive media industry, technical deep-dives, and career advice.">
+    <meta property="og:url" content="https://immnewsnetwork.com/">
+    <meta property="og:image" content="https://immnewsnetwork.com/images/bunny.jpg">
+    <meta property="og:image:alt" content="IMM News Network logo">
+
+    <!-- X / Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IMM News Network">
+    <meta name="twitter:description" content="News on the interactive media industry, technical deep-dives, and career advice.">
+    <meta name="twitter:image" content="https://immnewsnetwork.com/images/bunny.jpg">
+
+    <!-- Reference: https://help.uberflip.com/implementinguberflip/open-graph-and-twitter-card-tags-on-your-hub-explained -->
+
+</head>
+<header>
+    <img src="./favicon.ico" alt="IMM News Network logo" width="120">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <button type="button" id="reading-toggle" aria-pressed="false">Reading Assistance</button>
+</header>
+<body>
+    <form action="/process-contact" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="interests">Category Interests:</label><br>
+        <input type="checkbox" id="interests1" name="interests" value="industry"> Industry<br>
+        <input type="checkbox" id="interests2" name="interests" value="technical"> Technical<br>
+        <input type="checkbox" id="interests3" name="interests" value="career"> Career<br><br>
+
+        <label for="role">Role:</label><br>
+        <input id="role1" name="role" value="1" type="radio" />
+        <label for="role1">Writer</label><br>
+        <input id="role2" name="role" value="2" type="radio" />
+        <label for="role2">Contributor</label><br>
+        <input id="role3" name="role" value="3" type="radio" />
+        <label for="role3">Administrator</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script src="js/main.js" defer></script> <!-- Got it from this https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event -->
+<footer>
+    <div id="cookie-banner">
+        <p>We use cookies to remember your preferences and understand how visitors use our site.</p>
+        <a href="#" id="accept-cookies">Accept Cookies</a>
+    </div>
+</footer>
+</html>
