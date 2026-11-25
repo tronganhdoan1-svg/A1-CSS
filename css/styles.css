@@ -110,7 +110,7 @@ input[required] { border: 2px solid red; }
 /* Mobile specifics */
 
 body {
-    padding-top: 260px;  /* measure again at this width */
+    padding-top: 260px;  
   }
 
 body.reading-assist {
@@ -131,7 +131,7 @@ p {
   }
 
   body {
-    padding-top: 260px;  /* measure again at this width */
+    padding-top: 260px;  
   }
 
   body.reading-assist {
