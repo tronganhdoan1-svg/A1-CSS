@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Lora:wght@400;700&display=swap");
+
+body {
+  font-size: 16px;
+  font-family: "Lora", Georgia, serif;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 body.reading-assist {
     background: #000;
     color: #fff;
@@ -19,3 +32,129 @@ body.reading-assist button {
     color: #000;
     border: 2px solid #ffff00;
 }
+
+/* ===== Base / mobile ===== */
+body {
+  font-size: 16px;
+  font-family: "Lora", Georgia, serif;
+  background-color: grey;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 120px 0 100px; /* room for the fixed header/footer */
+}
+
+h1, h2, h3 {
+  font-size: 1.5em;   /* 1.5 × parent's font size */
+  margin-left: 30px;
+  overflow-wrap: break-word;  /* long words wrap instead of spilling */
+}
+
+header, footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+header { top: 0; }
+footer { bottom: 0; }
+
+article {
+  background-color: white;
+  width: auto;
+  height: auto;
+  margin: 20px 10px;
+  border: 2px solid #ccc;
+  padding: 16px;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+}
+
+.featured article { font-size: 1.25em; }
+
+#featured .author {
+  background-color: salmon;
+  color: white;
+  padding: 4px 8px;
+}
+
+#industry .author {
+  background-color: rebeccapurple;
+  color: white;
+  padding: 4px 8px;
+}
+
+#technical .author {
+  background-color: black;
+  color: white;
+  padding: 4px 8px;
+}
+#career .author {
+  background-color: purple;
+  color: white;
+  padding: 4px 8px;
+}
+
+input[required] { border: 2px solid red; }
+
+/* Mobile specifics */
+
+body {
+    padding-top: 260px;  /* measure again at this width */
+  }
+
+body.reading-assist {
+    padding-top: 320px;
+  }
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+.logo { width: 60px; height: auto; }
+
+/* ===== Tablet + desktop ===== */
+@media (min-width: 768px) {
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  body {
+    padding-top: 260px;  /* measure again at this width */
+  }
+
+  body.reading-assist {
+    padding-top: 320px;
+  }
+
+  .logo { width: 160px; }
+
+  .featured {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+}
+
+/* body {
+  background-color: white;
+  margin: 20px 10px;
+  padding: 16px;
+} */
